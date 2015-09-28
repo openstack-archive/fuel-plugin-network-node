@@ -1,0 +1,14 @@
+network-node:
+  name: "Network Node"
+  description: "Role to create a seperate Network Node"
+  update_required:
+    - controller
+    - network-node
+  has_primary: True
+  public_ip_required: True
+  weight: 1000
+  conflicts:
+    - controller
+    - compute
+  limits:
+    min: 1
